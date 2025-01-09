@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Button</title>
+    <title>Home Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,35 +40,18 @@
         button:active {
             transform: scale(1.05);
         }
-
-        img {
-            margin-top: 20px;
-            max-width: 80%;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            transform: scale(0.8);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        img.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
     </style>
 </head>
 <body>
     <h1>Welcome to My Hosting Page</h1>
-    <p>Click the button below to reveal an image!</p>
-    <button id="revealButton">Click Me</button>
-    <img id="hiddenImage" src="yenul.jpg" alt="A beautiful scene">
+    <p>Click the button below to go to the image page!</p>
+    <button id="navigateButton">Go to Image</button>
 
     <script>
-        const button = document.getElementById('revealButton');
-        const image = document.getElementById('hiddenImage');
+        const button = document.getElementById('navigateButton');
 
         button.addEventListener('click', () => {
-            image.classList.toggle('visible');
+            window.location.href = "yenul.html";
         });
     </script>
 </body>
